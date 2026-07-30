@@ -1,12 +1,13 @@
 {
-  "version": "1.7.0",
-  "date": "2026-07-08",
+  "version": "1.7.1",
+  "date": "2026-07-30",
   "url": "https://github.com/Osservatorio679/o679/releases",
   "download": "https://github.com/Osservatorio679/o679/releases/latest",
   "novita": [
     "Migrazione CDN alla nuova area Osservatorio679 (osservatorio679.github.io/o679)",
     "Widget o679 aggiornato a 1.1.0 con default iconBaseUrl al nuovo CDN",
     "Manifest icons.json v1.1.0",
+    "URL bundle app allineati al nuovo repo Osservatorio679/o679",
     "Assemblatore automatico vignette fumetto",
     "Etichette AI EU (AI Act art. 50)",
     "Formati card A6/A5/A4 con stampa reale",
@@ -15,7 +16,7 @@
     "Guida in linea e accessibilità EAA"
   ],
   "previous": {
-    "version": "1.4.0",
-    "date": "2026-07-06"
+    "version": "1.7.0",
+    "date": "2026-07-08"
   }
 }
