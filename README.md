@@ -10,10 +10,12 @@
 
 | Tipo | URL |
 |------|-----|
-| **GitHub Pages (CDN)** | `https://feniva.github.io/o679/` |
-| **Raw GitHub (fallback)** | `https://raw.githubusercontent.com/feniva/o679/main/` |
+| **GitHub Pages (CDN)** | `https://osservatorio679.github.io/o679/` |
+| **Raw GitHub (fallback)** | `https://raw.githubusercontent.com/Osservatorio679/o679/main/` |
 | **Manifest JSON** | `/icons.json` |
 | **Widget JS** | `/widget/o679-widget.js` |
+| **Canale versione GIPD** | `/gipd-version.json` |
+| **Demo live** | `/demo.html` |
 
 ---
 
@@ -33,6 +35,7 @@
 ```
 o679/
 ├── icons.json                    # Manifest completo icone + metadati GDPR
+├── gipd-version.json             # Canale versione app GIPD
 ├── icons/
 │   ├── normal/                   # Icone teal — dati normali
 │   ├── sensitive/                # Icone giallo — dati sensibili
@@ -40,6 +43,7 @@ o679/
 │   └── bn/                       # Bianco/nero — stampa
 ├── widget/
 │   └── o679-widget.js            # Widget trasparenza dinamica
+├── demo.html                     # Demo live integrata
 ├── _headers                      # Cache + CORS (Cloudflare Pages)
 └── .github/
     └── workflows/
@@ -52,7 +56,7 @@ o679/
 
 ```html
 <!-- 1. Includi il widget -->
-<script src="https://feniva.github.io/o679/widget/o679-widget.js"></script>
+<script src="https://osservatorio679.github.io/o679/widget/o679-widget.js"></script>
 
 <!-- 2. Configura -->
 <script>
@@ -82,10 +86,10 @@ o679.notify({
 ```javascript
 // Utility statica
 const url = Osservatorio679Widget.getIconUrl('trattamento-in-corso', 'sensitive');
-// → https://feniva.github.io/o679/icons/sensitive/trattamento-in-corso.png
+// → https://osservatorio679.github.io/o679/icons/sensitive/trattamento-in-corso.png
 
 // Oppure costruisci manualmente:
-const BASE = 'https://feniva.github.io/o679/';
+const BASE = 'https://osservatorio679.github.io/o679/';
 const iconUrl = `${BASE}icons/${state}/${iconId}.png`;
 ```
 
@@ -119,7 +123,7 @@ const iconUrl = `${BASE}icons/${state}/${iconId}.png`;
 ```python
 import requests
 
-BASE_URL = "https://feniva.github.io/o679/"
+BASE_URL = "https://osservatorio679.github.io/o679/"
 
 # Carica manifest
 manifest = requests.get(BASE_URL + "icons.json").json()
@@ -129,6 +133,16 @@ def get_icon(icon_id: str, state: str = "normal") -> bytes:
     url = f"{BASE_URL}icons/{state}/{icon_id}.png"
     return requests.get(url).content
 ```
+
+---
+
+## 🔄 Canale versione GIPD
+
+L'app GIPD legge `gipd-version.json` per rilevare aggiornamenti disponibili.
+
+URL (con fallback raw):
+- Primario: `https://osservatorio679.github.io/o679/gipd-version.json`
+- Raw:      `https://raw.githubusercontent.com/Osservatorio679/o679/main/gipd-version.json`
 
 ---
 
@@ -144,6 +158,16 @@ Inclusi nel repo:
 pip install Pillow
 python verify_repo.py
 ```
+
+---
+
+## 🚀 Rilasciare una nuova versione
+
+1. Aggiorna `icons.json` (bump `version`) e/o `widget/o679-widget.js` (bump nell'header).
+2. Se cambia GIPD, aggiorna `gipd-version.json` con la nuova release.
+3. `git commit` + `git push origin main` — il workflow `pages.yml` rideploya in ~1 min.
+4. Tag: `git tag v1.7.0 && git push origin v1.7.0`.
+5. Opzionale: crea la Release GitHub allegando il pacchetto GIPD.
 
 ---
 

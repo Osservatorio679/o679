@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # rename_icons.py — Rinomina file Osservatorio679 in slug canonici
-# Adattato per repo feniva/o679: sorgenti esterne (CONTEST) → icons/normal/ + icons/bn/
+# Repo Osservatorio679/o679: sorgenti esterne (CONTEST) → icons/normal/ + icons/bn/
 
 import os, shutil, sys
 

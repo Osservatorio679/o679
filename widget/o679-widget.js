@@ -1,14 +1,14 @@
 /**
  * ============================================================
  *  Osservatorio679 Transparency Widget — o679-widget.js
- *  Versione: 1.0.0
+ *  Versione: 1.1.0
  *  Licenza: CC BY — Osservatorio679
  *  GDPR Reference: Art. 12 §7 — Trasparenza Dinamica
  * ============================================================
  *
  *  UTILIZZO BASE:
  *
- *    <script src="https://feniva.github.io/o679/widget/o679-widget.js"></script>
+ *    <script src="https://osservatorio679.github.io/o679/widget/o679-widget.js"></script>
  *    <script>
  *      const o679 = new Osservatorio679Widget({
  *        titolare:   "Azienda SRL",
@@ -34,7 +34,7 @@
     position:    'bottom-right',     // 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left'
     lang:        'it',
     autoHide:    12000,              // ms — 0 per non nascondere automaticamente
-    iconBaseUrl: 'https://feniva.github.io/o679/icons/',
+    iconBaseUrl: 'https://osservatorio679.github.io/o679/icons/',
     storageKey:  'o679_consent_log',
     debug:       false,
   };

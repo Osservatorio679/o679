@@ -1,11 +1,11 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "name": "Osservatorio679 Icons",
   "description": "Sistema iconografico standardizzato per informative privacy GDPR — Art. 12 §7",
   "license": "CC BY — Osservatorio679",
   "license_url": "https://creativecommons.org/licenses/by/4.0/",
   "author": "Osservatorio679",
-  "homepage": "https://feniva.github.io/o679/",
+  "homepage": "https://osservatorio679.github.io/o679/",
   "gdpr_reference": "GDPR Art. 12 §7, Art. 13, Art. 14",
   "states": {
     "normal":    { "color": "#00897B", "label": "Dati personali normali", "gdpr": "Art. 4(1)" },
