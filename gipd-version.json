@@ -1,22 +1,18 @@
 {
-  "version": "1.7.1",
-  "date": "2026-07-30",
+  "version": "1.8.0",
+  "date": "2026-09-11",
   "url": "https://github.com/Osservatorio679/o679/releases",
   "download": "https://github.com/Osservatorio679/o679/releases/latest",
   "novita": [
-    "Migrazione CDN alla nuova area Osservatorio679 (osservatorio679.github.io/o679)",
-    "Widget o679 aggiornato a 1.1.0 con default iconBaseUrl al nuovo CDN",
-    "Manifest icons.json v1.1.0",
-    "URL bundle app allineati al nuovo repo Osservatorio679/o679",
-    "Assemblatore automatico vignette fumetto",
-    "Etichette AI EU (AI Act art. 50)",
-    "Formati card A6/A5/A4 con stampa reale",
-    "QR code reale offline",
-    "Demo live widget (demo.html)",
-    "Guida in linea e accessibilità EAA"
+    "Icone ufficiali caricate direttamente dal GitHub Osservatorio679 (Pages + raw), copia locale solo di riserva",
+    "Colori reali dei PNG ufficiali per dati particolari e profilazione",
+    "Un solo index.html con selettore grafica UIX / Classica",
+    "Rimossa la vecchia sorgente icone non HTTPS",
+    "Sicurezza: codifica dei campi liberi in card ed export HTML, controllo aggiornamenti blindato",
+    "Corretto il numero di versione interno (la 1.7.1 si dichiarava 1.7.0)"
   ],
   "previous": {
-    "version": "1.7.0",
-    "date": "2026-07-08"
+    "version": "1.7.1",
+    "date": "2026-07-30"
   }
 }
